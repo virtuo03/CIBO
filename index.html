@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Preferences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>Le Mie Preferenze Alimentari</h1>
+            </div>
+            <div class="preference-stats">
+                <div class="stat-card like-stat">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <span class="stat-count" id="like-count">0</span>
+                        <span class="stat-label">Mi piacciono</span>
+                    </div>
+                </div>
+                <div class="stat-card neutral-stat">
+                    <i class="fas fa-meh"></i>
+                    <div>
+                        <span class="stat-count" id="neutral-count">0</span>
+                        <span class="stat-label">Mangio</span>
+                    </div>
+                </div>
+                <div class="stat-card dislike-stat">
+                    <i class="fas fa-times-circle"></i>
+                    <div>
+                        <span class="stat-count" id="dislike-count">0</span>
+                        <span class="stat-label">Non mangio</span>
+                    </div>
+                </div>
+                <div class="stat-card unset-stat">
+                    <i class="fas fa-question-circle"></i>
+                    <div>
+                        <span class="stat-count" id="unset-count">0</span>
+                        <span class="stat-label">Da classificare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="filter-group">
+                <label for="category-filter">Filtra per categoria:</label>
+                <select id="category-filter">
+                    <option value="all">Tutte le categorie</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="preference-filter">Filtra per preferenza:</label>
+                <select id="preference-filter">
+                    <option value="all">Tutti</option>
+                    <option value="unset">Non ancora classificati</option>
+                    <option value="like">Mi piace</option>
+                    <option value="neutral">Mangio ma non amo</option>
+                    <option value="dislike">Non mangio</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="search">Cerca alimento:</label>
+                <input type="text" id="search" placeholder="Inserisci nome...">
+            </div>
+        </div>
+
+        <div class="food-list" id="food-list">
+            <!-- Gli alimenti verranno inseriti qui dinamicamente -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Le Mie Preferenze Alimentari</p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-info-circle"></i> Info</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Aiuto</a>
+                <a href="#" id="reset-btn"><i class="fas fa-trash-alt"></i> Resetta preferenze</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
