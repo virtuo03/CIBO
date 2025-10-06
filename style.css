@@ -50,6 +50,34 @@ header {
     gap: 20px;
 }
 
+/* Nuovo stile per le azioni sotto il riepilogo */
+.header-summary-actions {
+    max-width: 1200px;
+    margin: 10px auto 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end; /* Allinea a destra il pulsante Condividi */
+}
+
+.action-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-dark);
+}
+/* Fine nuovo stile per le azioni sotto il riepilogo */
+
 .logo {
     display: flex;
     align-items: center;
@@ -317,6 +345,29 @@ footer {
     opacity: 0.8;
 }
 
+/* Back to Top Button */
+#back-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it stays on top */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--accent-neutral); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+#back-to-top-btn:hover {
+    background-color: var(--accent-neutral-dark); /* Darker background on hover */
+}
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -348,22 +399,8 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
-}
 
-/* Animazioni 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    .header-summary-actions {
+        justify-content: center; /* Centra il pulsante in mobile */
+    }
 }
-
-.food-item {
-    animation: fadeIn 0.5s ease forwards;
-    opacity: 0;
-}
-
-.food-item:nth-child(1) { animation-delay: 0.1s; }
-.food-item:nth-child(2) { animation-delay: 0.2s; }
-.food-item:nth-child(3) { animation-delay: 0.3s; }
-.food-item:nth-child(4) { animation-delay: 0.4s; }
-.food-item:nth-child(5) { animation-delay: 0.5s; }
-.food-item:nth-child(n+6) { animation-delay: 0.6s; }*/
