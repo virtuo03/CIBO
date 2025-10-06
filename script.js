@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             `😐 Mangio: ${preferenceCounts.neutral}\n` +
                             `❌ Non mangio: ${preferenceCounts.dislike}\n` +
                             `❓ Da classificare: ${preferenceCounts.unset}\n\n` +
-                            `Crea le tue su [Link al tuo sito, es. preferenzecibo.it]`; // Sostituisci con il link reale
+                            `Crea le tue su cosamangi.netlify.app`; // Sostituisci con il link reale
 
         // Usa l'API di Condivisione Web se disponibile
         if (navigator.share) {
